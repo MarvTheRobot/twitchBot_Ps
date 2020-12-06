@@ -47,15 +47,18 @@ function Start-Bot {
 					'PING' {
 						Write-Output "You've been PING'd"
 						$response = 'PONG :tmi.twitch.tv'
+						Write-Output "You have PONG'd"
 						$outputStream.WriteLine($response)
 						$outputStream.Flush()
-						Write-Output "You have PONG'd"
 					}
 					# Handle the message
 					'PRIVMSG' {
+						Write-Output $message
 						$response = Get-PrivateMessageResponse($message.Content)
-						$outputStream.WriteLine("PRIVMSG #$channel :'$response'")
-						$outputStream.Flush()
+						if(-not ([string]::IsNullOrEmpty($response))){
+							$outputStream.WriteLine("PRIVMSG #$channel :'$response'")
+							$outputStream.Flush()
+						}
 					}
 					Default {	
 						$message
@@ -106,3 +109,4 @@ function Get-PrivateMessageResponse {
 		$commands.$Message
 	}
 }
+
