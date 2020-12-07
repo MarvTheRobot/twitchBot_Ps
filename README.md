@@ -4,7 +4,7 @@ Here be the dragons I have fought while building a bot for my [twitch channel](h
 
 This readme is as badly written as the code; YMMV
 
-> _... I got stuck very early on, I got unstuck thanks to the work of [Chrissy LeMaire - potatoqualitee](https://github.com/potatoqualitee/tvbot/)
+> _... I got stuck very early on, I got unstuck thanks to the work of [Chrissy LeMaire - potatoqualitee](https://github.com/potatoqualitee/tvbot/)_
 
 ## Setup
 
